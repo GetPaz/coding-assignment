@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-codingassignment-dev-182210-authRole",
+      "UnauthRoleArn": "arn:aws:iam::594519763223:role/amplify-codingassignment-dev-182210-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::594519763223:role/amplify-codingassignment-dev-182210-authRole",
+      "Region": "ap-south-1",
+      "DeploymentBucketName": "amplify-codingassignment-dev-182210-deployment",
+      "UnauthRoleName": "amplify-codingassignment-dev-182210-unauthRole",
+      "StackName": "amplify-codingassignment-dev-182210",
+      "StackId": "arn:aws:cloudformation:ap-south-1:594519763223:stack/amplify-codingassignment-dev-182210/ac8f9f00-49d4-11eb-afb2-06d8b429ea60",
+      "AmplifyAppId": "d2jor0opw1jgz8"
+    },
+    "categories": {
+      "auth": {
+        "codingassignment": {}
+      }
+    }
+  }
+}

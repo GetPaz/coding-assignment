@@ -1,0 +1,55 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Parameters": {
+        "authcodingassignmentUserPoolId": {
+            "Type": "String",
+            "Default": "authcodingassignmentUserPoolId"
+        },
+        
+        "authcodingassignmentAppClientID": {
+            "Type": "String",
+            "Default": "authcodingassignmentAppClientID"
+        },
+        "authcodingassignmentAppClientIDWeb": {
+            "Type": "String",
+            "Default": "authcodingassignmentAppClientIDWeb"
+        },
+        "AuthRoleArn": {
+            "Type": "String"
+        },
+        "UnauthRoleArn": {
+            "Type": "String"
+        },
+        "env": {
+            "Type": "String"
+        }
+    },
+    "Conditions": {
+        "ShouldNotCreateEnvResources": {
+            "Fn::Equals": [
+                {
+                    "Ref": "env"
+                },
+                "NONE"
+            ]
+        }
+    },
+    "Resources": {
+    
+        "adminGroup": {
+          "Type" : "AWS::Cognito::UserPoolGroup",
+          "Properties" : {
+              "GroupName" : "admin",
+              "Precedence" : 1,
+              
+              "UserPoolId" : {
+                "Ref": "authcodingassignmentUserPoolId"
+              } 
+            }
+        },
+        
+    
+    
+    },
+    
+}
